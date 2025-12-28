@@ -24,7 +24,7 @@ public class StudentController {
 	@PostMapping("/api/students")
 	public ResponseEntity<Student> saveStudent(@RequestBody Student student)
 	{
-		return new ResponseEntity<>(studentRepo.save(student),HttpStatus.CREATED);
+		return new ResponseEntity<>("status of the student details: "+studentRepo.save(student),HttpStatus.CREATED);
 
 	}
 	
@@ -51,3 +51,4 @@ public ResponseEntity<List<Student>> getStudent()
 		
 
 }
+
